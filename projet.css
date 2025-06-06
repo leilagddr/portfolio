@@ -1,0 +1,135 @@
+/* structure de la page */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(./image/exp2.jpg) ;
+    opacity: 0.8;
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start; /* Aligne les divs en haut */
+    padding: 100px;
+}
+main div{
+    background-color: #BBD2E1;
+    border-radius: 10px;
+    width: 300px;
+    height: 800px;
+    margin: 10px;
+    padding: 20px;
+}
+main div img {
+    display: block;
+    margin: 0 auto; /* Centre l'image horizontalement */
+    max-width: 50%; /* Ajuste la taille de l'image à la largeur du conteneur */
+    height: auto; /* Maintient les proportions de l'image */
+    margin-bottom: 10px; /* Ajoute un espace entre l'image et le contenu suivant */
+}
+main div h2{
+    text-align: center;
+    margin-left: 5px;
+    color: #C4698F;
+}
+main div p{
+    text-align: justify;
+    margin-left: 8px;
+    }
+main div h3{
+    margin-left: 8px;
+}
+main h1 {
+    color: #4465b4;
+    font-size: 50px;
+    margin-left: 20px;
+}
+main p {
+    margin-left: 20px;
+}
+
+main div:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* BARRE DE NAVIGATION */
+header.bar {
+    background-color: rgba(68, 101, 180, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    z-index: 1000;
+    margin: 0;
+}
+
+header.bar a {
+    margin: 0 12px;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+header.bar a:hover {
+    color: #0b3baf;
+}
+header.bar a.active {
+    display: inline-block;
+    border-bottom: 2px solid #0b3baf; /* Épaisseur et couleur de la ligne */
+    padding-bottom: 2px;            /* Espace entre le texte et la ligne */
+    line-height: 1.2; ;}
+
+/* BOUTON FIXE EN HAUT À DROITE */
+.menu {
+    position: fixed;
+    top: 2px;
+    right: 16px;
+    z-index: 2000;
+}
+
+.menu button {
+    background-color: #0b3baf ;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MENU DÉROULANT */
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    border-radius: 3px;
+    z-index: 2001;
+}
+
+.menu-content a {
+    font-size: 15px;
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+.menu-content a:hover {
+    background-color: #ddd;
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
